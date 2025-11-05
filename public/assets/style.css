@@ -1,0 +1,52 @@
+
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;background:#0f172a;color:#e2e8f0}
+:root{--muted:#94a3b8;--green:#22c55e;--green2:#16a34a;--blue:#38bdf8;--maxw:1100px;--gap:1.1rem;--rad:12px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gap)}
+
+
+header{position:sticky;top:0;z-index:10;background:#0b1226cc;backdrop-filter:blur(6px);border-bottom:1px solid #20304e}
+header .wrap{display:flex;align-items:center;gap:1rem;padding:.8rem 0}
+header img{height:40px}
+header h1{margin:0;font-size:1.4rem}
+nav{margin-left:auto}
+nav ul{margin:0;padding:0;list-style:none;display:flex;gap:.8rem;flex-wrap:wrap}
+nav a{display:inline-block;padding:.45rem .7rem;border-radius:10px;color:#e2e8f0;text-decoration:none;border:1px solid transparent;font-weight:600}
+nav a:hover{background:#0ea5e91a;border-color:#0ea5e966}
+
+
+section{padding:2rem 0}
+h2{margin:0 0 .8rem;font-size:1.6rem}
+p{color:var(--muted);max-width:70ch}
+
+/* Grille produits (cartes .product) */
+#products{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+#products>h2{grid-column:1/-1}
+.product{background:#0b1226;border:1px solid #233355;border-radius:var(--rad);padding:1rem;transition:.15s transform,.15s box-shadow}
+.product:hover{transform:translateY(-2px);box-shadow:0 10px 22px #0006}
+.product h3{margin:.3rem 0 .4rem}
+.prix{color:#bbf7d0;font-weight:800;margin:.2rem 0 .6rem}
+
+/* Image block (produits) */
+.VeloElectrique{border-radius:10px;overflow:hidden;border:1px solid #233355;margin:.5rem 0 .9rem}
+.VeloElectrique img{display:block;width:100%;height:220px;object-fit:cover}
+
+/* Boutons */
+.btn,button{display:inline-block;cursor:pointer;font-weight:700;padding:.6rem .9rem;border-radius:10px;border:1px solid #34d399;background:linear-gradient(180deg,var(--green),var(--green2));color:#06210c;text-decoration:none}
+.btn:hover,button:hover{filter:brightness(1.06)}
+
+/* Formulaires (contact/commander) */
+form{display:grid;gap:.8rem;max-width:720px;background:#0b1226;border:1px solid #233355;border-radius:var(--rad);padding:1rem}
+label{font-weight:600}
+input,select,textarea{width:100%;padding:.6rem .75rem;border-radius:10px;border:1px solid #2b3e60;background:#0c1630;color:#e2e8f0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px #38bdf840}
+textarea{min-height:120px;resize:vertical}
+
+/* Footer */
+footer{border-top:1px solid #20304e;color:var(--muted);text-align:center;padding:1rem 0;margin-top:1.5rem}
+
+/* Responsive */
+@media (max-width:720px){
+  nav ul{justify-content:center}
+  section{padding:1.5rem 0}
+  .VeloElectrique img{height:190px}
+}
