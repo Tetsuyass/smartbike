@@ -1,10 +1,10 @@
 <?php
 namespace App\Controllers;
-use App\Models\Product;
+use App\Models\Produit;
 
 class HomeController {
     public function index() {
-        $last = Product::lastAdded();
+        $last = Produit::lastAdded();
         require __DIR__ . '/../Views/home.php';
     }
 }
